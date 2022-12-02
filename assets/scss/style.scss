@@ -1,0 +1,34 @@
+@import "variables";
+@import "reset";
+@import "mixin";
+
+.status {
+  background-color: $primaryColor;
+  min-height: 100vh;
+  @include centerDiv;
+
+  div {
+    padding: 1rem 2rem;
+    font-size: 3rem;
+    border-radius: 1rem;
+    color: $textWhite;
+  }
+
+  .online-mgs {
+    background-color: green;
+    display: block;
+  }
+  .offline-mgs {
+    background-color: red;
+    display: none;
+  }
+
+  &.offline {
+    .online-mgs {
+      display: none;
+    }
+    .offline-mgs {
+      display: block;
+    }
+  }
+}
